@@ -17,11 +17,14 @@ import javax.jms.ConnectionFactory;
 public class JmsdemoApplication {
 
 	public static void main(String[] args) {
-		ConfigurableApplicationContext context =SpringApplication.run(JmsdemoApplication.class, args);
-		JmsTemplate jmsTemplate=context.getBean(JmsTemplate.class);
-		System.out.println("Sending an email message.");
-//		jmsTemplate.convertAndSend("mailbox", new Email("info@example.com", "Hello"));
-		jmsTemplate.convertAndSend("mailbox", new Prodcut("myproduct", "1234"));
+
+		SpringApplication.run(JmsdemoApplication.class, args);
+//		#Try to publish message when application started
+//		ConfigurableApplicationContext context =SpringApplication.run(JmsdemoApplication.class, args);
+//		JmsTemplate jmsTemplate=context.getBean(JmsTemplate.class);
+//		System.out.println("Sending an email message.");
+////		jmsTemplate.convertAndSend("mailbox", new Email("info@example.com", "Hello"));
+//		jmsTemplate.convertAndSend("mailbox", new Prodcut("myproduct", "1234"));
 	}
 
 
