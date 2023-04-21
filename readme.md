@@ -6,4 +6,4 @@ Run in local ./mvnw spring-boot:run
 #invoke Api with this end point to publish message
 http://localhost:8080/sendmessage
 #Get Message
-
+Mq Listener will listen meaasages continuously
